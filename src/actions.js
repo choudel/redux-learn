@@ -5,3 +5,9 @@ export const bugAdded= description=>({
         description
     }
 })
+export const bugRemoved=id=>({
+    type:actions.BUG_REMOVED,
+    payload:{
+        id
+    }
+})

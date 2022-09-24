@@ -9,6 +9,7 @@ specifiers:
   prettier: ^2.6.2
   prettier-plugin-svelte: ^2.7.0
   redux: ^4.2.0
+  reselect: ^4.1.6
   svelte: ^3.44.0
   svelte-check: ^2.7.1
   svelte-preprocess: ^4.10.6
@@ -20,6 +21,7 @@ dependencies:
   '@redux-devtools/extension': 3.2.3_redux@4.2.0
   '@reduxjs/toolkit': 1.8.5
   redux: 4.2.0
+  reselect: 4.1.6
 
 devDependencies:
   '@playwright/test': 1.26.0

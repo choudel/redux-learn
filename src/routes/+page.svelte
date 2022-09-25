@@ -7,17 +7,19 @@ const store = configureStore()
 const unsubscribe = store.subscribe(()=>{
     console.log("Store changed!",store.getState())
 })
-
+store.dispatch((dispatch,getState)=>{
+dispatch({type:"bugsRecieved", bugs:[1,2,3]})
+})
 store.dispatch(userAdded({name:"User 1"}))
-store.dispatch(userAdded({name:"User 2"}))
-store.dispatch(bugAdded({description:"Bug 1"}))
-store.dispatch(bugAdded({description:"Bug 2"}))
+//store.dispatch(userAdded({name:"User 2"}))
+//store.dispatch(bugAdded({description:"Bug 1"}))
+//store.dispatch(bugAdded({description:"Bug 2"}))
 
-store.dispatch(bugAssignedToUser({bugId:1, userId:1}))
-store.dispatch(bugResolved({id:1}))
-const UnresolvedBugs=getUnresolvedBugs(store.getState())
-const AssignedBugs=getBugsByUser(1)(store.getState())
+//store.dispatch(bugAssignedToUser({bugId:1, userId:1}))
+//store.dispatch(bugResolved({id:1}))
+//const UnresolvedBugs=getUnresolvedBugs(store.getState())
+//const AssignedBugs=getBugsByUser(1)(store.getState())
 
-console.log(UnresolvedBugs)
-console.log(AssignedBugs)
+//console.log(UnresolvedBugs)
+//console.log(AssignedBugs)
 </script>
